@@ -15,6 +15,7 @@ python manage.py runserver
 ```
 
 3. Set up Google Project
+
 On the [Google Developer Console](https://console.cloud.google.com/) you should create a project that authenticates and redirects the user after the login. After that you receive Client ID and Client Secret credentials which are essentinal for Google authentication. Then in admin panel in Sites model you should change `example.com` to `127.0.0.1:8000`and in Socail Application model add an instance with the credentials. In order to not writing a whole page of detailed explanation I leave the helpful links:
 - https://www.rootstrap.com/blog/how-to-integrate-google-login-in-your-django-rest-api-using-the-dj-rest-auth-library
 - https://dj-rest-auth.readthedocs.io/en/latest/installation.html#google
@@ -52,6 +53,7 @@ where:
 After a successful sign in in the url you'l receive an access token which you should send via POST request to dj-rest-auth/google/login/.
 
 5. Running tests.
+
 When you are done with the steps above you can run the tests by the command:
 ```
 python manage.py test
