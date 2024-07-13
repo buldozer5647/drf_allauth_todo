@@ -36,7 +36,7 @@ Admin panel can be found on http://127.0.0.1:8000/admin/.
 - tasks/: 
   - GET: the list of all authorized user's todo items. You can filter data  in the uri by "complete" and "due_date" fields. Also data is paginated by 12 instances per page. 
   - POST: create a new todo item.
-- tasks/<id>/: 
+- tasks/*integer_id*/: 
   - GET: information about the single todo item by its id. 
   - PATCH: update the todo item by its id. 
   - DELETE: delete the to do item by its id
