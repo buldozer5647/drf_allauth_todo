@@ -54,7 +54,7 @@ class TestTasks(APITestCase):
 
         response = self.client.get(self.list_tasks_url, format="json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 1)
+        self.assertEqual(len(response.data["results"]), 1)
     
     def test_authed_get_task_by_id(self):
         self.client.login(username="testuser", password="12345testuser12345")
